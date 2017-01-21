@@ -1,2 +1,1 @@
-# draganddropsimplegame
-trash
+# ignore this github project
