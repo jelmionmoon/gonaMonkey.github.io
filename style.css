@@ -1,0 +1,42 @@
+#header {
+				background: rgb(44,62,80);
+				height: 80px;     
+        color: white;  
+}
+
+#content {
+        background: rgb(192,192,192);
+}
+
+#main, #footer {
+        background:  gray;
+}
+         
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+body {
+  line-height: 1.5;
+  padding: 4em 1em;
+  background-color: #E0ECFF;          <!-- Lightwhite background -->
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+@-ms-viewport{                        <!-- scaalautuu mobiililla  -->
+  width: device-width;
+}
+
+a:link    {color:green; background-color:transparent; text-decoration:none}
+a:visited {color:rgb(128,128,0); background-color:transparent; text-decoration:none}
+a:hover   {color:red; background-color:transparent; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}	
