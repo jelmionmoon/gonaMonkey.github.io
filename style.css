@@ -1,21 +1,26 @@
-
+html {
+    background-image: url('bg.png');
+    /* Full height */
+    height: 100%; 
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 #header, #content, body, p, h1, h2, #footer, a, nav {
 margin: 0;
 padding: 0;
-
 position: relative;
-padding: 1px;
 
 } 
-
 
 #header {
         margin: 40px 0 0 0;
 				background: rgb(44,62,80);
 				height: 110px;     
         color: white;  
-        padding: 0px 0px 0px 80p;
+        padding: 0px 0px 0px 80px;
         
          font-size: 2rem;
          font-weight: bold;
@@ -24,14 +29,12 @@ padding: 1px;
 }
 
 #content {
-        background: rgb(192,192,192);
-        
+        background: rgb(192,192,192);      
 }
 
 #main, #footer {
         background:  gray; 
-        font-size: 22px;
-        
+        font-size: 22px;        
 }
       
 #footer {
@@ -50,19 +53,21 @@ body {
 
 body {
   line-height: 1.5;
+}
 
-  background-color: #E0ECFF;          <!-- Lightwhite background -->
-  }
+img {
+  float: right;
+  padding: 30px 200px 0 0;
+}
 
 h2 {
 font-size: 66px;
+color: rgb(44,62,80);
 }
 
 h2 {
 padding-left: 70px;
-
 }
-
 
 p {
 font-size: 2rem;
@@ -70,12 +75,12 @@ padding-left: 50px;
 }
 
 a {
-  font-size: 3rem;
+  font-size: 2rem;
   padding-left: 80px;
 }
 
 
-@-ms-viewport{                        <!-- scaalautuu mobiililla  -->
+@-ms-viewport{                      
   width: device-width;
 }
 
@@ -86,6 +91,7 @@ a:active  {color:yellow; background-color:transparent; text-decoration:underline
 
 nav {
   background-color: #FFF;
+  padding: 5px;
 }
 
 nav li {
@@ -100,8 +106,6 @@ nav a {
   color: #204156;
   text-decoration: none;
 }
-
-
 
 .button {
     background-color: #4CAF50;
@@ -120,4 +124,4 @@ nav a {
 
 .button:hover {
  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
- }
+}
