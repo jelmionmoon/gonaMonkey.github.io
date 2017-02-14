@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ 
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+     
+  
+  <style>
+  #draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px; }
+      #choice2  { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "CORRECT" );
+      }
+    });
+  } );
+  </script>
+  
+  
+  <script>
+ function get_elapsed_time_string(total_seconds) {
+  function pretty_time_string(num) {
+    return ( num < 10 ? "0" : "" ) + num;
+  }
+
+  var hours = Math.floor(total_seconds / 3600);
+  total_seconds = total_seconds % 3600;
+
+  var minutes = Math.floor(total_seconds / 60);
+  total_seconds = total_seconds % 60;
+
+  var seconds = Math.floor(total_seconds);
+
+  // Pad the minutes and seconds with leading zeros, if required
+  hours = pretty_time_string(hours);
+  minutes = pretty_time_string(minutes);
+  seconds = pretty_time_string(seconds);
+
+  // Compose the string for display
+  var currentTimeString = hours + ":" + minutes + ":" + seconds;
+
+  return currentTimeString;
+}
+
+var elapsed_seconds = 100;
+setInterval(function() {
+  elapsed_seconds = elapsed_seconds - 3;
+  $('#box_header').text(get_elapsed_time_string(elapsed_seconds));
+}, 1000);
+
+  </script>
+  
+</head>
+<div id="box_header"></div>
+<body>
+            <div class="clock"></div>
+<div id="draggable" class="ui-widget-content">
+  <p>1010</p>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>10</p>
+</div>
+        
+              <div id="choice2" class="ui-widget-header" >
+              <p> 6 </p>
+              </div>
+ 
+</body>
+</html>
